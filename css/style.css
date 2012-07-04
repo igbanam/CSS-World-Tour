@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  width: 960px;
+  min-height: 600px;
+  margin: 0 auto;
+  font: 1.4em/1.8em georgia, times, serif;
+}
+
+footer {
+  font-size: 75%;
+  text-align: center;
+}
+
+footer ul li, footer ul li a {
+  float: left;
+}
+
+footer ul li a {
+  padding: .5em 1em;
+  margin: 0 .5em;
+  width: 140px;
+}
+
+footer ul li:before, footer ul li:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+
+footer ul li:after {
+  clear: both;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+  font-variant: small-caps; /* Might take this out later */
+}
+
+h1 {
+  font-size: 300%;
+  line-height: 150%;
+}
+
+h2 {
+  font-size: 250%;
+  line-height: 125%;
+}
+
+h3 {
+  font-size: 200%;
+  line-height: 100%;
+}
+
+h4 {
+  font-size: 150%;
+  line-height: 75%;
+}
+
+h5 {
+  font-size: 100%;
+  line-height: 50%;
+}
+
+h6 {
+  font-size: 85%;
+  line-height: 42.5%;
+}
+
+li {
+  list-style: none;
+}
+
+p {
+  margin: 1em;
+}
