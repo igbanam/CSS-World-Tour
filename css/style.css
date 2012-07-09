@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "PT Sans";
+  src: url("../fonts/PT Sans Regular.woff");
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -7,6 +12,12 @@
 
 a {
   text-decoration: none;
+  font-family: "PT Sans", sans-serif;
+  color: yellow;
+}
+
+a:visited {
+  color: orange;
 }
 
 body {
