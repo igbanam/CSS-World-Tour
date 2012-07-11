@@ -12,5 +12,5 @@ __v0.0.1__
   Concept and original styling
 
 
- [1]: http://www.linkedin.com/profile/view?id=35980901
+ [1]: http://www.linkedin.com/profile/view?id=35980901 
  [2]: http://www.linkedin.com/profile/view?id=35341057
