@@ -1,4 +1,400 @@
 /* CSS World Tour default style v0.1 */
 /* CSS released under Creative Commons License - http://creativecommons.org/licenses/by-nc-sa/3.0/  */
-
 /* Your images should be linked as if the CSS file sits in the same folder as the images. ie. no paths. */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+@font-face {
+  font-family: "3 Dumb";
+  src: url('./3Dumb.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: "PT Serif";
+  src: url('./PT Serif Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: "Rabio Head";
+  src: url('./rabiohead.ttf') format('truetype');
+}
+
+@-webkit-keyframes wobble {
+  0% {
+    -webkit-transform: translateX(0%);
+  }
+
+  15% {
+    -webkit-transform: translateX(-5%) rotate(-5deg);
+  }
+
+  30% {
+    -webkit-transform: translateX(4%) rotate(3deg);
+  }
+
+  45% {
+    -webkit-transform: translateX(-3%) rotate(-3deg);
+  }
+
+  60% {
+    -webkit-transform: translateX(2%) rotate(2deg);
+  }
+
+  75% {
+    -webkit-transform: translateX(-1%) rotate(-1deg);
+  }
+
+  100% {
+    -webkit-transform: translateX(0%);
+  }
+}
+
+@-moz-keyframes wobble {
+  0% {
+    -moz-transform: translateX(0%);
+  }
+
+  15% {
+    -moz-transform: translateX(-5%) rotate(-5deg);
+  }
+
+  30% {
+    -moz-transform: translateX(4%) rotate(3deg);
+  }
+
+  45% {
+    -moz-transform: translateX(-3%) rotate(-3deg);
+  }
+
+  60% {
+    -moz-transform: translateX(2%) rotate(2deg);
+  }
+
+  75% {
+    -moz-transform: translateX(-1%) rotate(-1deg);
+  }
+
+  100% {
+    -moz-transform: translateX(0%);
+  }
+}
+
+@-o-keyframes wobble {
+  0% {
+    -o-transform: translateX(0%);
+  }
+
+  15% {
+    -o-transform: translateX(-5%) rotate(-5deg);
+  }
+
+  30% {
+    -o-transform: translateX(4%) rotate(3deg);
+  }
+
+  45% {
+    -o-transform: translateX(-3%) rotate(-3deg);
+  }
+
+  60% {
+    -o-transform: translateX(2%) rotate(2deg);
+  }
+
+  75% {
+    -o-transform: translateX(-1%) rotate(-1deg);
+  }
+
+  100% {
+    -o-transform: translateX(0%);
+  }
+}
+
+.wobble {
+  -webkit-animation-name: wobble;
+  -moz-animation-name: wobble;
+  -o-animation-name: wobble;
+  animation-name: wobble;
+}
+
+#struggle {
+  background-image: url("image1.png");
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  padding-bottom: 340px;
+}
+
+#about {
+  background-image: url("image2.png");
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  padding-bottom: 370px;
+}
+
+#participation {
+  background-image: url("image3.png");
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  padding-bottom: 623px;
+}
+
+#benefits {
+  background-image: url("image4.png");
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  padding-bottom: 393px;
+}
+
+body {
+  width: 1200px;
+  margin: 0 auto;
+  font-family: tahoma, helvetica, sans-serif;
+  font-size: 1em;
+}
+body h3 {
+  font-weight: bold;
+  font-size: 1.37em;
+}
+body .cushioned_text, body p, body h3, body h4, body h5, body h6 {
+  margin: 0.3em 0;
+}
+body header {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  -webkit-transition-property: -webkit-transform;
+  -moz-transition-property: -webkit-transform;
+  -o-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  -webkit-transition-property: -moz-transform;
+  -moz-transition-property: -moz-transform;
+  -o-transition-property: -moz-transform;
+  transition-property: -moz-transform;
+  -webkit-transition-property: -o-transform;
+  -moz-transition-property: -o-transform;
+  -o-transition-property: -o-transform;
+  transition-property: -o-transform;
+  -webkit-transition-duration: 2s;
+  -moz-transition-duration: 2s;
+  -o-transition-duration: 2s;
+  transition-duration: 2s;
+  -webkit-animation-name: wobble;
+  -webkit-animation-duration: 3s;
+  -webkit-animation-delay: 2s;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-name: wobble;
+  -moz-animation-duration: 3s;
+  -moz-animation-delay: 2s;
+  -moz-animation-iteration-count: infinite;
+  -o-animation-name: wobble;
+  -o-animation-duration: 3s;
+  -o-animation-delay: 2s;
+  -o-animation-iteration-count: infinite;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+body header:hover {
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+body header:after {
+  content: "";
+  position: absolute;
+  left: 575px;
+  top: 105px;
+}
+body header:before {
+  background-image: url("mascot.png");
+  background-repeat: no-repeat;
+  content: "";
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+body header h1 {
+  font-family: "3 Dumb", sans-serif;
+  font-size: 7em;
+  margin-bottom: 0.1em;
+}
+body header h2 {
+  margin-top: 0.1em;
+  color: black;
+  font-family: "Rabio Head", comic, sans-serif;
+  font-size: 1.9em;
+  font-weight: bold;
+  color: #b414db;
+}
+body section {
+  float: right;
+  width: 900px;
+  margin-top: 20px;
+}
+body section h3 {
+  text-align: right;
+  color: #3cddf7;
+  text-shadow: 0 0 2px #056b7b;
+  font-size: 1.7em;
+}
+body section a {
+  color: #6af43d;
+  text-decoration: none;
+}
+body aside {
+  background-image: url("scrollarrow.png");
+  background-repeat: no-repeat;
+  width: 235px;
+  float: left;
+  position: fixed;
+  top: 160px;
+}
+body aside nav {
+  margin-bottom: 10px;
+}
+body aside nav:first-child {
+  margin-top: 160px;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #54e1f8), color-stop(100%, #24d9f6));
+  background: -webkit-linear-gradient(top, #54e1f8, #24d9f6);
+  background: -moz-linear-gradient(top, #54e1f8, #24d9f6);
+  background: -o-linear-gradient(top, #54e1f8, #24d9f6);
+  background: linear-gradient(top, #54e1f8, #24d9f6);
+}
+body aside nav:first-child li:hover {
+  background-color: #6de6f9;
+}
+body aside nav {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  padding: 5px;
+  -webkit-box-shadow: 3px 3px 5px #c2c2c2;
+  -moz-box-shadow: 3px 3px 5px #c2c2c2;
+  box-shadow: 3px 3px 5px #c2c2c2;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #7df555), color-stop(100%, #57f325));
+  background: -webkit-linear-gradient(top, #7df555, #57f325);
+  background: -moz-linear-gradient(top, #7df555, #57f325);
+  background: -o-linear-gradient(top, #7df555, #57f325);
+  background: linear-gradient(top, #7df555, #57f325);
+  color: white;
+}
+body aside nav li:hover {
+  background-color: #8ff76d;
+}
+body aside nav a {
+  color: white;
+  height: 15px;
+  line-height: 15px;
+}
+body aside nav li {
+  padding: 0.2em 0.5em;
+  font-size: 0.8em;
+}
+body aside nav h3 {
+  text-shadow: 0 -1px 0 black;
+}
+body aside nav:last-child {
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #c21eea), color-stop(100%, #a112c4));
+  background: -webkit-linear-gradient(top, #c21eea, #a112c4);
+  background: -moz-linear-gradient(top, #c21eea, #a112c4);
+  background: -o-linear-gradient(top, #c21eea, #a112c4);
+  background: linear-gradient(top, #c21eea, #a112c4);
+}
+body aside nav:last-child li:hover {
+  background-color: #c935ed;
+}
+body footer {
+  width: 100px;
+  margin: 0 auto;
+  height: 100px;
+  clear: both;
+  font-size: 0.85em;
+}
+body footer ul {
+  padding-top: 20px;
+  margin-left: 20px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  *zoom: 1;
+  text-align: center;
+}
+body footer ul li {
+  list-style-image: none;
+  list-style-type: none;
+  margin-left: 0;
+  white-space: nowrap;
+  display: inline;
+  float: left;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+body footer ul li:first-child, body footer ul li.first {
+  padding-left: 0;
+}
+body footer ul li:last-child {
+  padding-right: 0;
+}
+body footer ul li.last {
+  padding-right: 0;
+}
+body footer ul li {
+  height: 100px;
+  line-height: 100px;
+}
