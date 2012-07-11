@@ -72,6 +72,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   src: url('./rabiohead.ttf') format('truetype');
 }
 
+@font-face {
+  font-family: "FFF Tusj";
+  src: url('./FFF_Tusj.ttf') format('truetype');
+}
+
 @-webkit-keyframes jiggle {
   0% {
     -webkit-transform: translateX(0%);
@@ -402,6 +407,16 @@ body footer {
 body footer a {
   color: #6af43d;
   text-decoration: none;
+}
+body footer:after {
+  content: "design by Leah Phan and Owajigbanam Ogbuluijah";
+  text-align: center;
+  position: absolute;
+  top: 100%;
+  left: -450px;
+  width: 1200px;
+  font-family: "FFF Tusj", georgia, serif;
+  font-size: 1.5em;
 }
 body footer ul {
   margin: 0;
