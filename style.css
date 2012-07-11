@@ -72,7 +72,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   src: url('./rabiohead.ttf') format('truetype');
 }
 
-@-webkit-keyframes wobble {
+@-webkit-keyframes jiggle {
   0% {
     -webkit-transform: translateX(0%);
   }
@@ -102,7 +102,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   }
 }
 
-@-moz-keyframes wobble {
+@-moz-keyframes jiggle {
   0% {
     -moz-transform: translateX(0%);
   }
@@ -132,7 +132,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   }
 }
 
-@-o-keyframes wobble {
+@-o-keyframes jiggle {
   0% {
     -o-transform: translateX(0%);
   }
@@ -160,13 +160,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   100% {
     -o-transform: translateX(0%);
   }
-}
-
-.wobble {
-  -webkit-animation-name: wobble;
-  -moz-animation-name: wobble;
-  -o-animation-name: wobble;
-  animation-name: wobble;
 }
 
 #struggle {
@@ -197,6 +190,44 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   padding-bottom: 393px;
 }
 
+#archives ul {
+  *zoom: 1;
+}
+#archives ul:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
+}
+#archives ul li {
+  *zoom: 1;
+}
+#archives ul li:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
+}
+#archives ul li:nth-child(odd) {
+  float: right;
+}
+#archives ul li:nth-child(even) {
+  float: left;
+}
+#archives ul li:last-child {
+  clear: both;
+  text-align: center;
+  width: 95%;
+}
+
+.cushioned_text, body section p, body section h3, body section h4, body section h5, body section h6 {
+  margin: 0.7em 0;
+}
+
 body {
   width: 1200px;
   margin: 0 auto;
@@ -207,50 +238,52 @@ body h3 {
   font-weight: bold;
   font-size: 1.37em;
 }
-body .cushioned_text, body p, body h3, body h4, body h5, body h6 {
-  margin: 0.3em 0;
-}
 body header {
   position: relative;
   width: 100%;
   text-align: center;
-  -webkit-transition-property: -webkit-transform;
-  -moz-transition-property: -webkit-transform;
-  -o-transition-property: -webkit-transform;
-  transition-property: -webkit-transform;
-  -webkit-transition-property: -moz-transform;
-  -moz-transition-property: -moz-transform;
-  -o-transition-property: -moz-transform;
-  transition-property: -moz-transform;
-  -webkit-transition-property: -o-transform;
-  -moz-transition-property: -o-transform;
-  -o-transition-property: -o-transform;
-  transition-property: -o-transform;
+  -webkit-transition-property: -webkit-animation;
+  -moz-transition-property: -webkit-animation;
+  -o-transition-property: -webkit-animation;
+  transition-property: -webkit-animation;
+  -webkit-transition-timing-function: easein;
+  -moz-transition-timing-function: easein;
+  -o-transition-timing-function: easein;
+  transition-timing-function: easein;
+  -webkit-transition-property: -moz-animation;
+  -moz-transition-property: -moz-animation;
+  -o-transition-property: -moz-animation;
+  transition-property: -moz-animation;
+  -webkit-transition-timing-function: easein;
+  -moz-transition-timing-function: easein;
+  -o-transition-timing-function: easein;
+  transition-timing-function: easein;
+  -webkit-transition-property: -o-animation;
+  -moz-transition-property: -o-animation;
+  -o-transition-property: -o-animation;
+  transition-property: -o-animation;
+  -webkit-transition-timing-function: easein;
+  -moz-transition-timing-function: easein;
+  -o-transition-timing-function: easein;
+  transition-timing-function: easein;
   -webkit-transition-duration: 2s;
   -moz-transition-duration: 2s;
   -o-transition-duration: 2s;
   transition-duration: 2s;
-  -webkit-animation-name: wobble;
+  -webkit-animation-name: jiggle;
   -webkit-animation-duration: 3s;
   -webkit-animation-delay: 2s;
   -webkit-animation-iteration-count: infinite;
-  -moz-animation-name: wobble;
+  -moz-animation-name: jiggle;
   -moz-animation-duration: 3s;
   -moz-animation-delay: 2s;
   -moz-animation-iteration-count: infinite;
-  -o-animation-name: wobble;
+  -o-animation-name: jiggle;
   -o-animation-duration: 3s;
   -o-animation-delay: 2s;
   -o-animation-iteration-count: infinite;
   margin-top: 40px;
   margin-bottom: 20px;
-}
-body header:hover {
-  -webkit-transform: rotate(360deg);
-  -moz-transform: rotate(360deg);
-  -ms-transform: rotate(360deg);
-  -o-transform: rotate(360deg);
-  transform: rotate(360deg);
 }
 body header:after {
   content: "";
@@ -283,16 +316,17 @@ body section {
   float: right;
   width: 900px;
   margin-top: 20px;
+  font-size: 1.3em;
+}
+body section a {
+  color: #6af43d;
+  text-decoration: none;
 }
 body section h3 {
   text-align: right;
   color: #3cddf7;
   text-shadow: 0 0 2px #056b7b;
   font-size: 1.7em;
-}
-body section a {
-  color: #6af43d;
-  text-decoration: none;
 }
 body aside {
   background-image: url("scrollarrow.png");
@@ -359,21 +393,22 @@ body aside nav:last-child li:hover {
   background-color: #c935ed;
 }
 body footer {
-  width: 100px;
-  margin: 0 auto;
-  height: 100px;
   clear: both;
+  position: relative;
+  margin: 0 auto;
+  width: 320px;
   font-size: 0.85em;
 }
+body footer a {
+  color: #6af43d;
+  text-decoration: none;
+}
 body footer ul {
-  padding-top: 20px;
-  margin-left: 20px;
   margin: 0;
   padding: 0;
   border: 0;
   overflow: hidden;
   *zoom: 1;
-  text-align: center;
 }
 body footer ul li {
   list-style-image: none;
@@ -394,7 +429,10 @@ body footer ul li:last-child {
 body footer ul li.last {
   padding-right: 0;
 }
-body footer ul li {
-  height: 100px;
-  line-height: 100px;
+body footer ul li a {
+  height: 50px;
+  line-height: 50px;
+  width: 100px;
+  text-align: center;
+  display: block;
 }
